@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Пароль4</title>
+ <style>
+  body {
+   background-color: lightblue;
+   padding: 30px;
+  }
+ </style>
+ <script>
+  function checkPassword() {
+   var password = document.getElementById("passwordBox");
+   var passwordText = password.value;
+   if(passwordText == "Galaxy") {
+    return true;
+   }
+   alert("Неверный Пароль! Доступ Запрещён!");
+   return false;
+   }
+ </script>
+</head>
+<body>
+<div style="text-align: center;">
+ <p style="font-size: 60pt;">Приложение</p>
+<div style="font-size: 40px;">
+ <p>Для перехода на сайт введите пароль.</p>
+ <p>Пароль:<input id="passwordBox" type="password"/></p>
+ <a href="Volkov.html" target="_blank" onclick="return checkPassword();">
+  Список задач
+ </a><br/>
+<a href="Krestik.html" target="_blank" onclick="return checkPassword();">
+  Крестики Нолики
+ </a><br/>
+<a href="Tenis.html" target="_blank" onclick="return checkPassword();">
+  Настольный Тенис
+ </a><br/>
+</div>
+</div>
+</body>
+</html>

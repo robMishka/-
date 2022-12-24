@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Пароль2</title>
+ <style>
+  body {
+   background-color: lightblue;
+   padding: 30px;
+  }
+ </style>
+ <script>
+  function checkPassword() {
+   var password = document.getElementById("passwordBox");
+   var passwordText = password.value;
+   if(passwordText == "Comet") {
+    return true;
+   }
+   alert("Неверный Пароль! Доступ Запрещён!");
+   return false;
+   }
+ </script>
+</head>
+<body>
+<div style="text-align: center;">
+ <p style="font-size: 60pt;">Приложение</p>
+<div style="font-size: 40px;">
+ <p>Для перехода на сайт введите пароль.</p>
+ <p>Пароль:<input id="passwordBox" type="password"/></p>
+ <a href="pd3.html" onclick="return checkPassword();">
+  Перейти на сайт
+ </a>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Список Задач</title>
+ <script>
+  function addItem() {
+   var newItem = document.createElement("div");
+   newItem.innerHTML = document.getElementById("box").value;
+   newItem.onclick = removeItem;
+   document.getElementById("list").appendChild(newItem);
+   saveList();
+  }
+  function removeItem() {
+   document.getElementById("list").removeChild(this);
+   saveList();
+  }
+  function saveList() {
+   localStorage.storedList = document.getElementById("list").innerHTML;
+  }
+  function loadList() {
+   document.getElementById("list").innerHTML = localStorage.storedList;
+   for(var i = 0; i < list.children.length; i++) {
+    list.children[i].onclick = removeItem;
+   }
+  }
+ </script>
+ <style>
+  .header {
+    height:75px; 
+    width: 350px; 
+    background-color:lightblue; 
+    float: center; 
+    padding:10px; 
+    margin:20px;
+    text-align:centre; 
+    font-size:24px;
+  }
+  .app {
+    height:600px;
+    width: 350px; 
+    background-color:lightgreen; 
+    float: center; 
+    padding:10px; 
+    margin:20px;
+  }
+  input[type="button"] {
+   background-color: pink;
+  }
+ </style>
+</head>
+<body>
+ <div class="app">
+  <p style="font-size:18px; font-style:bold;">Список задач</p>
+  <input type="text" id="box" value="Введите Задачу"/>
+  <br/>
+  <input type="button" value="Добавить Задачу" onclick="addItem();"/>
+  <br/>
+   <div id="list"></div>
+ </div>
+ <script>
+  if(localStorage.storedList) {
+   loadList();
+  }
+ </script>
+<div style="background-color: blue; height: 100px; width: 2000px;">
+	<br/>
+	<br/>
+	<div style="text-align: center;">
+	<a href="pr.html"style="font-size:40px;">Попробовать Другие Приложения</a>
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Вход</title>
+ <style>
+  body {
+   background-color: #0000AA;
+   padding: 30px;
+  }
+ </style>
+ <script>
+alert("Создатель Этого Сайта Mikhail")
+  function checkPassword() {
+   var password = document.getElementById("passwordBox");
+   var passwordText = password.value;
+   if(passwordText == "Mikhail") {
+    return true;
+   }
+   alert("Аккаунта Не Существует!");
+   return false;
+   }
+ </script>
+</head>
+<body>
+<div style="text-align: center;">
+ <p style="font-size: 60pt;">КОСМОС</p>
+<div style="font-size: 40px;">
+ <p>Вход в Аккаунт.</p>
+ <p>Имя Аккаунта:<input id="passwordBox" type="password"/></p>
+ <a href="123.html" onclick="return checkPassword();">
+  Войти
+ </a>
+</div>
+</div>
+</body>
+</html>
